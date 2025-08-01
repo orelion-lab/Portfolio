@@ -143,18 +143,21 @@ section {
   transition: background 0.3s ease;
 }
 .btn:hover {
+  border: 1px solid black;
   background: #fff;
   color: #0abf53;
-
+  transform: rotateX(360deg);
+   transition: 2s;
 }
 .email {
+  opacity: 0.8;
   align-self: center;
-  color: #333;
+  color: #CFE5D8;
   text-decoration: underline;
 }
 
 .hero-image img {
-  width: 600px;
+  width: 660px;
   max-width: 100%;
 }
 /* ========== RESPONSIVE STYLES ========== */
@@ -734,6 +737,157 @@ section {
 
 
 
+
+
+
+
+
+.showcase-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1300px; 
+    width: 100%;
+    gap: 40px;
+}
+
+.content-column {
+    flex: 1;
+    max-width: 58%; 
+}
+
+.image-column {
+  top: 12px;
+    flex: 2;
+    max-width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px; 
+    scale: 1.2;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+.top h2 {
+    font-size: 46px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #0abf53;
+}
+
+
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #444;
+}
+
+
+
+
+
+.skill-tag {
+    border: 1px solid #888;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14.4px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease, color 0.3s ease;
+}
+
+.skill-tag:hover {
+    border-color: #00ff00;
+    color: #00ff00;
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.6);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.tool-icon {
+    height: 40px;
+
+}
+.tool {
+  margin-top: 20px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0abf53;
+}
+
+
+
+@media (max-width: 1024px) {
+    .showcase-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .content-column, .image-column {
+        max-width: 100%;
+    }
+
+    .image-column {
+        padding-top: 0;
+    }
+    
+    .image-column img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+    
+    .skill-tag {
+        font-size: 12.8px;
+        padding: 6px 14px;
+    }
+
+    .tools-grid {
+        gap: 25px;
+        justify-content: center; 
+    }
+
+    .tool-icon {
+        height: 35px;
+}
+}
 
 
 
