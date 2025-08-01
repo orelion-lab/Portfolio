@@ -107,7 +107,6 @@ section {
   justify-content: space-between;
   padding: 80px 10%;
   flex-wrap: wrap;
-  height: 90vh;
   background: #090909;
 }
 
@@ -172,7 +171,7 @@ section {
 
 @media (max-width: 500px) {
   .logo {
-  display: none; /* Remove logo on small screens as requested */
+  display: flex; 
   }
 
   .navbar {
@@ -187,7 +186,33 @@ section {
 }
 
 
+@media (max-width: 1024px) {
+    .hero {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 100px;
+  margin-left: 0;
+  gap: 10px;
+  }
 
+  .hero-content {
+  max-width: 100%;
+  }
+
+  .hero .hello {
+  font-size: 60px;
+  }
+
+  .hero .name {
+  font-size: 48px;
+  }
+
+  .logo2 {
+    display: none;
+  visibility: hidden;
+  }
+}
 @media (max-width: 768px) {
   .hero {
   flex-direction: column;
@@ -211,6 +236,7 @@ section {
   }
 
   .logo2 {
+    display: none;
   visibility: hidden;
   }
 }
@@ -222,7 +248,7 @@ section {
   }
 
   .hero .hello {
-  font-size: 48px;
+  font-size: 58px;
   }
 
   .hero .name {
@@ -269,10 +295,18 @@ section {
 }
 
 .section-content {
+  width: 100%;
+  flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 48px;
+}
+
+.sect {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
 }
 
 .colla {
@@ -302,6 +336,7 @@ section {
   padding: 32px;
   border-radius: 12px;
   position: relative;
+  max-height: 330px;
 }
 
 .review-content {
@@ -388,13 +423,20 @@ section {
   .section-content {
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
   }
 
   .review {
-  width: 90%;
+  width: 100%;
   }
+
+  .sect {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ }
 }
 
 @media (max-width: 600px) {
@@ -618,40 +660,56 @@ section {
 }
 
 @media (max-width: 768px) {
-
-  .title h1 {
-  font-size: 28px;
+  .skills-container {
+    /* Removed centering and added padding for better mobile layout */
+    padding: 0;
   }
-
+  
+  .skills-flex {
+    gap: 10px;
+  }
+  
   .skill-card {
-  flex: 1 1 100%;
-  max-width: 100%;
-  height: auto;
+    /* Made cards wider and added horizontal margin for spacing */
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
   }
-
+  
   .skill-header .skill-icon {
-  width: 150px;
-  height: 150px;
+    width: 150px;
+    height: 150px;
   }
-
+  
   .skill-expand {
-  width: 100%;
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-  background: none;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
   }
-
+  
   .skill-header {
-  display: none;
+    display: none;
   }
-
-  .skill-expand p {
-  font-size: 13px;
+  
+  .skill-text-content {
+    /* Adjusted text container for mobile layout */
+    max-width: none;
+    margin-bottom: 20px;
   }
+  
+  .skill-text-content h3, .skill-text-content h4, .skill-text-content p {
+    /* Ensured text is left-aligned on smaller screens */
+    text-align: left;
+  }
+  
+  .skill-image-wrapper {
 
-  .skill-expand h3, .skill-expand h4 {
-  font-size: 16px;
+    height: 250px;
   }
 }
 
@@ -977,7 +1035,7 @@ video {
 .me {
   display: flex;
   flex-direction: column;
-  gap: 600px;
+  gap: 700px;
 }
 
 .me h1 {
@@ -1429,6 +1487,11 @@ button:hover {
   .meet {
   visibility: hidden;
   }
+
+  .ren {
+  flex-direction: column;
+  align-items: flex-start;
+  }
 }
 
 
@@ -1517,6 +1580,130 @@ button:hover {
 
 
 
+@media(max-width: 1512px) {
+
+    .hero-image .logo2 {
+        display: none;
+    }
+
+
+    /* --- About Section --- */
+    .aboutme .intro {
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .aboutme .me {
+        gap: 40px;
+        flex: 1;
+    }
+
+    .aboutme .me h1 {
+        font-size: 45px;
+        width: auto;
+    }
+
+    .aboutme .me p {
+        font-size: 18px;
+    }
+
+    .aboutme .profileme {
+        width: 40%;
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .aboutme .profileme img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        transform: scale(1);
+        object-fit: contain;
+    }
+
+    .sect {
+        gap: 90px;
+    }
+
+    .skill-card {
+        border-radius: 12px;
+        height: 100%;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        transition: 0.5s ease;
+        flex: 1;
+        min-width: 100px;
+        width: 300px;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    /* Skill Header (visible in default/shrunk state) */
+    .skill-header {
+        align-items: center;
+    }
+
+    .skill-header h3 {
+        font-size: 20px;
+    }
+
+    .skill-header .skill-icon {
+        width: 250px;
+        /* Smaller size for default icon */
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .skill-icon {
+        padding: 20px;
+    }
+
+
+
+    .skill-text-content {
+        flex: 3;
+        max-width: 250px;
+    }
+
+    .skill-text-content h3 {
+        font-size: 20px;
+    }
+
+    .skill-text-content h4 {
+        font-size: 16px;
+    }
+
+    .skill-text-content p {
+        font-size: 12px;
+    }
+
+    .skill-image-wrapper {
+        flex: 2.5;
+    }
+
+    .skill-example-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+
+
+    .skill-card:hover {
+        flex: 4;
+        min-width: 600px;
+    }
+
+    .contact-section {
+      margin-left: 0px;
+    }
+}
 
 
 
@@ -1527,6 +1714,7 @@ button:hover {
 display: none; 
 
 }
+
 
 /* --- About Section --- */
 .aboutme .intro {
@@ -1604,6 +1792,10 @@ visibility: hidden;
 
 @media (max-width: 768px) {
 
+  .sect {
+    gap: 10px;
+  }
+
 .hero-image .logo2 {
 display: none; 
 }
@@ -1637,13 +1829,14 @@ transform: scale(0.9);
 /* --- Skills Section --- */
 .skills-flex {
 flex-direction: column; 
-gap: 15px;
+gap: 27px;
 height: auto; 
 }
 
 .skill-card {
 flex: 1 1 100%; 
-max-width: 100%;
+width: 100%;
+max-width: 400px;
 height: auto; 
 cursor: default;
 }
